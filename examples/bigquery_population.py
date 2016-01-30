@@ -15,7 +15,7 @@ from examples import storages
 dataset = 'datapackage'
 prefix = 'population_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/population/datapackage.json'
-target = 'tmp/packages/population/datapackage.json'
+target = 'tmp/bigquery/packages/population/datapackage.json'
 
 
 # Execution

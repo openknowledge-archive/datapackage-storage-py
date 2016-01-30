@@ -15,7 +15,7 @@ from examples import storages
 dataset = 'datapackage'
 prefix = 's_and_p_500_companies_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/s-and-p-500-companies/datapackage.json'
-target = 'tmp/packages/s-and-p-500-companies/datapackage.json'
+target = 'tmp/bigquery/packages/s-and-p-500-companies/datapackage.json'
 
 
 # Execution

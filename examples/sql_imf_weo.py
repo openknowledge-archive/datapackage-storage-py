@@ -15,7 +15,7 @@ from examples import storages
 url = 'sqlite:///:memory:'
 prefix = 'imf_weo_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/imf-weo/datapackage.json'
-target = 'tmp/packages/imf-weo/datapackage.json'
+target = 'tmp/sql/packages/imf-weo/datapackage.json'
 
 
 # Execution

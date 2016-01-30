@@ -15,7 +15,7 @@ from examples import storages
 url = 'sqlite:///:memory:'
 prefix = 'finance_vix_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/finance-vix/datapackage.json'
-target = 'tmp/packages/finance-vix/datapackage.json'
+target = 'tmp/sql/packages/finance-vix/datapackage.json'
 
 
 # Execution

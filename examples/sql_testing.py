@@ -15,9 +15,9 @@ from examples import storages
 url = 'sqlite:///:memory:'
 prefix = 'testing_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/testing/datapackage.json'
-target = 'tmp/packages/testing/datapackage.json'
+target = 'tmp/sql/packages/testing/datapackage.json'
 
 
 # Execution
 if __name__ == '__main__':
-    storages.sql.run(url, prefix, source, target, 'package')
+    storages.sql.run(url, prefix, source, target, 'testing')

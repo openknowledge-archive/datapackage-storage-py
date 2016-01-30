@@ -15,7 +15,7 @@ from examples import storages
 dataset = 'datapackage'
 prefix = 'registry_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/registry/datapackage.json'
-target = 'tmp/packages/registry/datapackage.json'
+target = 'tmp/bigquery/packages/registry/datapackage.json'
 
 
 # Execution

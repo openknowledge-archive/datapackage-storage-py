@@ -15,7 +15,7 @@ from examples import storages
 dataset = 'datapackage'
 prefix = 'country_list_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/country-list/datapackage.json'
-target = 'tmp/packages/country-list/datapackage.json'
+target = 'tmp/bigquery/packages/country-list/datapackage.json'
 
 
 # Execution

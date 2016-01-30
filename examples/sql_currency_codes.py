@@ -15,7 +15,7 @@ from examples import storages
 url = 'sqlite:///:memory:'
 prefix = 'currency_codes_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/currency-codes/datapackage.json'
-target = 'tmp/packages/currency-codes/datapackage.json'
+target = 'tmp/sql/packages/currency-codes/datapackage.json'
 
 
 # Execution

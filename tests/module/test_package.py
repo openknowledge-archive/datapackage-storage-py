@@ -12,31 +12,11 @@ from importlib import import_module
 module = import_module('datapackage_storage.package')
 
 
-class Test_import_package(unittest.TestCase):
-
-    # Helpers
-
-    def setUp(self):
-        pass
+@pytest.mark.skipif()
+def test_import_package(self):
+    pass
 
 
-    # Tests
-
-    @unittest.skip('write')
-    def test(self):
-        pass
-
-
-class Test_export_package(unittest.TestCase):
-
-    # Helpers
-
-    def setUp(self):
-        pass
-
-
-    # Tests
-
-    @unittest.skip('write')
-    def test(self):
-        pass
+@pytest.mark.skipif()
+def test_export_package(self):
+    pass

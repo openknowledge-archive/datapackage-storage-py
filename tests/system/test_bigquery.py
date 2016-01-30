@@ -14,8 +14,9 @@ import shutil
 import tempfile
 import unittest
 
+
 from examples import storages
-from examples import sql_testing as testing
+from examples import bigquery_testing as testing
 
 
 class TestPackage(unittest.TestCase):
@@ -36,7 +37,7 @@ class TestPackage(unittest.TestCase):
     def test_testing(self):
 
         # Run function
-        storages.sql.run(testing.url, testing.prefix, testing.source, self.target, 'testing')
+        storages.bigquery.run(testing.dataset, testing.prefix, testing.source, self.target, 'testing')
 
         # Assert schemas
         source = json.load(io.open(testing.source, encoding='utf-8'))

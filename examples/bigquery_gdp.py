@@ -15,7 +15,7 @@ from examples import storages
 dataset = 'datapackage'
 prefix = 'gdp_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/gdp/datapackage.json'
-target = 'tmp/packages/gdp/datapackage.json'
+target = 'tmp/bigquery/packages/gdp/datapackage.json'
 
 
 # Execution

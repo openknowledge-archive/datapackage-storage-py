@@ -15,7 +15,7 @@ from examples import storages
 url = 'sqlite:///:memory:'
 prefix = 'country_list_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/country-list/datapackage.json'
-target = 'tmp/packages/country-list/datapackage.json'
+target = 'tmp/sql/packages/country-list/datapackage.json'
 
 
 # Execution

@@ -15,7 +15,7 @@ from examples import storages
 url = 'sqlite:///:memory:'
 prefix = 'language_codes_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/language-codes/datapackage.json'
-target = 'tmp/packages/language-codes/datapackage.json'
+target = 'tmp/sql/packages/language-codes/datapackage.json'
 
 
 # Execution

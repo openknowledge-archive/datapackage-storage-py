@@ -15,7 +15,7 @@ from examples import storages
 url = 'sqlite:///:memory:'
 prefix = 'gb_country_regional_analysis_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/gb-country-regional-analysis/datapackage.json'
-target = 'tmp/packages/gb-country-regional-analysis/datapackage.json'
+target = 'tmp/sql/packages/gb-country-regional-analysis/datapackage.json'
 
 
 # Execution

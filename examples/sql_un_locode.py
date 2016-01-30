@@ -15,7 +15,7 @@ from examples import storages
 url = 'sqlite:///:memory:'
 prefix = 'un_locode_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/un-locode/datapackage.json'
-target = 'tmp/packages/un-locode/datapackage.json'
+target = 'tmp/sql/packages/un-locode/datapackage.json'
 
 
 # Execution

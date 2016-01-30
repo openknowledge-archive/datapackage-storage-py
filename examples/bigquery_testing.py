@@ -15,9 +15,9 @@ from examples import storages
 dataset = 'datapackage'
 prefix = 'testing_%s_%s_' % (sys.version_info.major, sys.version_info.minor)
 source = 'examples/packages/testing/datapackage.json'
-target = 'tmp/packages/testing/datapackage.json'
+target = 'tmp/bigquery/packages/testing/datapackage.json'
 
 
 # Execution
 if __name__ == '__main__':
-    storages.bigquery.run(dataset, prefix, source, target, 'package')
+    storages.bigquery.run(dataset, prefix, source, target, 'testing')
