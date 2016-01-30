@@ -29,6 +29,11 @@ datapackage_storage.export_package(<storage>, 'descriptor.json', 'datapackage_na
 
 ## Tabular Storage
 
+On level between the high-level interface and low-level driver
+package uses **Tabular Storage** concept:
+
+![Tabular Storage](diagram.png)
+
 ### BigQuery
 
 To start using Google BigQuery service:
