@@ -25,6 +25,18 @@ if six.PY2:
 
 
 def convert_path(path, name):
+    """Convert resource's path and name to storage's table name.
+
+    Parameters
+    ----------
+    path: str
+    name: str
+
+    Returns
+    -------
+    table: str
+
+    """
     table = os.path.splitext(path)[0]
     table = table.replace(os.path.sep, '__')
     if name is not None:
@@ -35,6 +47,17 @@ def convert_path(path, name):
 
 
 def restore_path(table):
+    """Restore resource's path and name from storage's table.
+
+    Parameters
+    ----------
+    table: str
+
+    Returns
+    -------
+    (path: str, name: str)
+
+    """
     name = None
     splited = table.split('___')
     path = splited[0]
@@ -46,6 +69,21 @@ def restore_path(table):
 
 
 def convert_schemas(mapping, schemas):
+    """Convert schemas to be compatible with storage schemas.
+
+    Foreign keys related operations.
+
+    Parameters
+    ----------
+    mapping: dict
+        Mapping between resource name and table name.
+    schemas: list
+
+    Returns
+    -------
+    schemas: list
+
+    """
     for schema in schemas:
         for fk in schema.get('foreignKeys', []):
             resource = fk['reference']['resource']
@@ -61,6 +99,21 @@ def convert_schemas(mapping, schemas):
 
 
 def restore_resources(mapping, resources):
+    """Restore schemas from being compatible with storage schemas.
+
+    Foreign keys related operations.
+
+    Parameters
+    ----------
+    mapping: dict
+        Mapping between table and resource name.
+    resources: list
+
+    Returns
+    -------
+    resources: list
+
+    """
     for resource in resources:
         schema = resource['schema']
         for fk in schema.get('foreignKeys', []):
