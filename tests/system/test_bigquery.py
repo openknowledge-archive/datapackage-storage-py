@@ -42,6 +42,11 @@ class TestPackage(unittest.TestCase):
         # Assert schemas
         source = json.load(io.open(testing.source, encoding='utf-8'))
         target = json.load(io.open(self.target, encoding='utf-8'))
+        for resource in source['resources']:
+            if 'primaryKey' in resource['schema']:
+                del resource['schema']['primaryKey']
+            if 'foreignKeys' in resource['schema']:
+                del resource['schema']['foreignKeys']
         assert source == target
 
         # Assert data
