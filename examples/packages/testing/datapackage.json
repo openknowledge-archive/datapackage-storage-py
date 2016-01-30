@@ -1,0 +1,55 @@
+{
+    "name": "testing",
+    "resources": [
+        {
+            "name": "data1",
+            "path": "data/data1.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "name": "id",
+                        "type": "string"
+                    },
+                    {
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "name": "description",
+                        "type": "string"
+                    },
+                    {
+                        "name": "amount",
+                        "type": "number"
+                    }
+                ],
+                "primaryKey": "id"
+            }
+        },
+        {
+            "name": "data2",
+            "path": "data/data2.csv",
+            "schema": {
+                "fields": [
+                    {
+                        "type": "string",
+                        "name": "parent"
+                    },
+                    {
+                        "type": "string",
+                        "name": "comment"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "fields": "parent",
+                        "reference": {
+                            "resource": "data1",
+                            "fields": "id"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

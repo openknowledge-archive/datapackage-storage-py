@@ -1,0 +1,152 @@
+{
+  "name": "un-locode",
+  "title": "UN-LOCODE Codelist",
+  "version": "2015.2.0",
+  "license": "PDDL-1.0",
+  "sources": [{
+  "name": "UNECE",
+  "web": "http://www.unece.org/cefact/locode/welcome.html"
+  }],
+  "resources": [
+    {
+      "path": "data/code-list.csv",
+      "name": "Code list",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "Change",
+            "type": "string",
+            "description": "+ (newly added); X (to be removed); | (changed); # (name changed); = (reference entry); ! (US location with duplicate IATA code)"
+          },
+          {
+            "name": "Country",
+            "type": "string",
+            "description": "ISO 3166 alpha-2 Country Code, defined in countryCodes.csv",
+            "pattern": "[A-Z]{2}"
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "pattern": "[A-Z2-9]{3}"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "NameWoDiacritics",
+            "type": "string"
+          },
+          {
+            "name": "Subdivision",
+            "type": "string",
+            "description": "Defined in subdivisionCodes.csv"
+          },
+          {
+            "name": "Status",
+            "type": "string",
+            "description": "Defined in statusIndicators.csv"
+          },
+          {
+            "name": "Function",
+            "type": "string",
+            "description": "Defined in functionClassifiers.csv",
+            "pattern": "[01-][2-][3-][4-][5-][6-][7-][B-]"
+          },
+          {
+            "name": "Date",
+            "type": "string",
+            "format": "ym"
+          },
+          {
+            "name": "IATA",
+            "type": "string",
+            "description": "IATA code if different from LOCODE"
+          },
+          {
+            "name": "Coordinates",
+            "type": "string",
+            "format": "DDMM[N/S] DDDMM[W/E]"
+          },
+          {
+            "name": "Remarks",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "path": "data/country-codes.csv",
+      "name": "Country codes",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "CountryCode",
+            "type": "string"
+          },
+          {
+            "name": "CountryName",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "path": "data/function-classifiers.csv",
+      "name": "Function classifiers",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "FunctionCode",
+            "type": "string"
+          },
+          {
+            "name": "FunctionDescription",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "path": "data/status-indicators.csv",
+      "name": "Status indicators",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "STStatus",
+            "type": "string"
+          },
+          {
+            "name": "STDescription",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "path": "data/subdivision-codes.csv",
+      "name": "Subdivision codes",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "SUCountry",
+            "type": "string"
+          },
+          {
+            "name": "SUCode",
+            "type": "string"
+          },
+          {
+            "name": "SUName",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}

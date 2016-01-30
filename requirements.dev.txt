@@ -1,0 +1,12 @@
+-r requirements.txt
+git+https://github.com/okfn/jsontableschema-bigquery-py.git
+git+https://github.com/okfn/jsontableschema-sql-py.git@update
+google-api-python-client
+sqlalchemy
+pylama
+tox
+mock
+pytest
+pytest-cov
+coverage
+coveralls

@@ -1,0 +1,24 @@
+sudo:
+  false
+
+language:
+  python
+
+python:
+  - 2.7
+  - 3.3
+  - 3.4
+  - 3.5
+
+env:
+  global:
+    - TOXENV="py${PYTHON_VERSION//./}"
+
+install:
+  - pip install -Urrequirements.dev.txt
+
+script:
+  - python run.py test
+
+after_success:
+  - python run.py report
