@@ -1,7 +1,7 @@
 # datapackage-storage-py
 
-[![Travis](https://img.shields.io/travis/okfn/datapackage-storage-py.svg)](https://travis-ci.org/okfn/datapackage-storagey)
-[![Coveralls](http://img.shields.io/coveralls/okfn/datapackage-storage-py.svg?branch=master)](https://coveralls.io/r/okfn/datapackage-storageter)
+[![Travis](https://img.shields.io/travis/okfn/datapackage-storage-py.svg)](https://travis-ci.org/okfn/datapackage-storage-py)
+[![Coveralls](http://img.shields.io/coveralls/okfn/datapackage-storage-py.svg?branch=master)](https://coveralls.io/r/okfn/datapackage-storage-py?branch=master)
 
 A Python library for storing Data Packages in different storages.
 
