@@ -59,7 +59,8 @@ def import_package(storage, descriptor):
 
     # Write data to tables
     for table in storage.tables:
-        storage.write(table, datamap[table])
+        if table in datamap:
+            storage.write(table, datamap[table])
 
 
 def export_package(storage, descriptor, datapackage_name):
