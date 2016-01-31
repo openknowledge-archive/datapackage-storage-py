@@ -57,7 +57,7 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '.credentials.json'
 credentials = GoogleCredentials.get_application_default()
 service = build('bigquery', 'v2', credentials=credentials)
 project = json.load(io.open('.credentials.json', encoding='utf-8'))['project_id']
-storage = jtsbq.Storage(service, project, 'dataset')
+storage = jtsbq.Storage(service, project, 'dataset', prefix='prefix')
 ```
 
 ### SQL
@@ -70,7 +70,7 @@ SQLAlchemy is used as sql wrapper. We can get storage this way:
 import jtssql
 from sqlalchemy import create_engine
 
-engine = create_engine('sqlite:///:memory:')
+engine = create_engine('sqlite:///:memory:', prefix='prefix')
 storage = jtssql.Storage(engine)
 ```
 
