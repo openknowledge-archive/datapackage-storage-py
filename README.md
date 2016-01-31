@@ -36,6 +36,8 @@ package uses **Tabular Storage** concept:
 
 ### BigQuery
 
+Install `jsontableschema-bigquery-py` package.
+
 To start using Google BigQuery service:
 - Create a new project - [link](https://console.developers.google.com/home/dashboard)
 - Create a service key - [link](https://console.developers.google.com/apis/credentials)
@@ -60,8 +62,9 @@ storage = jtsbq.Storage(service, project, 'dataset')
 
 ### SQL
 
-SQLAlchemy is used as sql wrapper.
-We can get storage this way:
+Install `jsontableschema-sql-py` package.
+
+SQLAlchemy is used as sql wrapper. We can get storage this way:
 
 ```python
 import jtssql
@@ -70,16 +73,6 @@ from sqlalchemy import create_engine
 engine = create_engine('sqlite:///:memory:')
 storage = jtssql.Storage(engine)
 ```
-
-## Drivers
-
-### BigQuery
-
-See jsontableschema layer [readme](https://github.com/okfn/jsontableschema-bigquery-py/tree/update#jsontableschema-bigquery-py).
-
-### SQL
-
-See jsontableschema layer [readme](https://github.com/okfn/jsontableschema-sql-py/tree/update#jsontableschema-sql-py).
 
 ## Mappings
 
