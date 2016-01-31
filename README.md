@@ -82,3 +82,8 @@ datapackage.json resources -> storage tables
 data/data.csv schema -> storage table schema
 data/data.csv data -> storage table data
 ```
+
+## Documentation
+
+API documentation is presented as docstings:
+- [import/export](https://github.com/okfn/datapackage-storage-py/blob/master/jtsbq/package.py)
