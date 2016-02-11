@@ -3,4 +3,4 @@ jsontableschema
 
 # tabulator is datapackage-py dependency
 git+git://github.com/okfn/tabulator-py.git
-git+git://github.com/okfn/datapackage-py.git
+git+git://github.com/okfn/datapackage-py.git@40d4755d9f2f8a5504630d0d92b5dc2f2ab0bd13
