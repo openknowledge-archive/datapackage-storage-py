@@ -6,8 +6,8 @@ from __future__ import unicode_literals
 
 import io
 import os
-import csv
 import json
+import unicodecsv as csv
 from copy import deepcopy
 from jsontableschema.model import SchemaModel
 from datapackage import DataPackage
@@ -92,13 +92,10 @@ def export_package(storage, descriptor, datapackage_name):
 
         # Write data
         helpers.ensure_dir(fullpath)
-        with io.open(fullpath,
-                     mode=helpers.WRITE_MODE,
-                     newline=helpers.WRITE_NEWLINE,
-                     encoding=helpers.WRITE_ENCODING) as file:
+        with io.open(fullpath, 'wb') as file:
             model = SchemaModel(deepcopy(schema))
             data = storage.read(table)
-            writer = csv.writer(file)
+            writer = csv.writer(file, encoding='utf-8')
             writer.writerow(model.headers)
             for row in data:
                 writer.writerow(row)

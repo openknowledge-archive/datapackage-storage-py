@@ -19,10 +19,6 @@ WRITE_ENCODING = 'utf-8'
 if six.PY2:
     WRITE_ENCODING = None
 
-WRITE_NEWLINE = ''
-if six.PY2:
-    WRITE_NEWLINE = None
-
 
 def convert_path(path, name):
     """Convert resource's path and name to storage's table name.

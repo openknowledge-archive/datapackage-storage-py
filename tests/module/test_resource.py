@@ -63,6 +63,6 @@ class Test_export_resource(unittest.TestCase):
         self.ensure_dir.assert_has_calls([call('schema'), call('data')])
         self.open.assert_has_calls([
             call('schema', mode=ANY, encoding=ANY),
-            call('data', mode=ANY, encoding=ANY, newline=ANY)], any_order=True)
+            call('data', 'wb')], any_order=True)
         self.storage.describe.assert_called_with('table')
         self.storage.read.assert_called_with('table')

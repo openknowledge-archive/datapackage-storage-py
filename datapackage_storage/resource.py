@@ -5,8 +5,8 @@ from __future__ import absolute_import
 from __future__ import unicode_literals
 
 import io
-import csv
 import json
+import unicodecsv as csv
 from tabulator import topen
 from jsontableschema.model import SchemaModel
 
@@ -69,13 +69,10 @@ def export_resource(storage, table, schema, data):
 
     # Save data
     helpers.ensure_dir(data)
-    with io.open(data,
-                 mode=helpers.WRITE_MODE,
-                 newline=helpers.WRITE_NEWLINE,
-                 encoding=helpers.WRITE_ENCODING) as file:
+    with io.open(data, 'wb') as file:
         model = SchemaModel(schema)
         data = storage.read(table)
-        writer = csv.writer(file)
+        writer = csv.writer(file, encoding='utf-8')
         writer.writerow(model.headers)
         for row in data:
             writer.writerow(row)
