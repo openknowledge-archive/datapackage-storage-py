@@ -10,7 +10,8 @@ dependencies, add pre-commit hook to review and test code
 and get `run` command as unified developer interface:
 
 ```
-$ source activate.sh
+$ pip install --upgrade -r requirements.dev.txt
+
 ```
 
 ## Testing
@@ -18,7 +19,7 @@ $ source activate.sh
 To run code review and tests with coverage check:
 
 ```
-$ run test
+$ python run.py test
 ```
 
 Coverage data will be in the `.coverage` file.
